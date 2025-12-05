@@ -1,0 +1,70 @@
+<div class="about-page">
+  <section class="about-hero section">
+    <div class="container">
+      <h1 class="fade-in-up">About Us</h1>
+      <p class="section-subtitle fade-in-up">Building the future of cloud and software solutions</p>
+    </div>
+  </section>
+
+  <section class="about-content section">
+    <div class="container">
+      <!-- Company Story -->
+      <div class="content-section glass-card fade-in-up">
+        <h2>Our Story</h2>
+        <p>Navya Cloud & Software Solutions was founded with a mission to help businesses transform through innovative cloud and software engineering. We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.</p>
+        <p>What started as a small team of passionate developers has grown into a trusted partner for businesses worldwide, helping them navigate their digital transformation journey.</p>
+      </div>
+
+      <!-- Mission -->
+      <div class="content-section glass-card fade-in-up">
+        <h2>Our Mission</h2>
+        <p>To empower businesses with smart, scalable, and secure cloud and software solutions that enable growth and innovation in the digital age.</p>
+      </div>
+
+      <!-- Vision -->
+      <div class="content-section glass-card fade-in-up">
+        <h2>Our Vision</h2>
+        <p>To be the leading provider of cloud-native and modern software solutions, recognized for excellence, innovation, and client success.</p>
+      </div>
+
+      <!-- Values -->
+      <div class="content-section glass-card fade-in-up">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>Innovation</h4>
+            <p>Constantly exploring new technologies and methodologies</p>
+          </div>
+          <div class="value-item">
+            <h4>Excellence</h4>
+            <p>Commitment to delivering high-quality solutions</p>
+          </div>
+          <div class="value-item">
+            <h4>Integrity</h4>
+            <p>Honest and transparent in all our dealings</p>
+          </div>
+          <div class="value-item">
+            <h4>Client Success</h4>
+            <p>Your success is our ultimate measure of achievement</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="content-section fade-in-up">
+        <h2>Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let event of timeline">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">{{ event.year }}</span>
+              <h3>{{ event.title }}</h3>
+              <p>{{ event.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

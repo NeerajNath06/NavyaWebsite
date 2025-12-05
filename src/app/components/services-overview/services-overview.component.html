@@ -1,0 +1,25 @@
+<section class="services-section section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Comprehensive solutions for modern businesses</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card glass-card" 
+           *ngFor="let service of services" 
+           [attr.data-category]="service.category">
+        <div class="service-icon">
+          <span [attr.class]="'icon-' + service.icon"></span>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+    
+    <div class="services-cta fade-in-up">
+      <a routerLink="/services" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+

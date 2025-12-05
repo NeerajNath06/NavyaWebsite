@@ -1,0 +1,117 @@
+.not-found-page {
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+}
+
+.not-found-section {
+  position: relative;
+  z-index: 1;
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.not-found-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.error-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.float-element {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+  
+  &.element-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #0057FF 0%, transparent 70%);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  &.element-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #A855F7 0%, transparent 70%);
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 2s;
+  }
+  
+  &.element-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #38BDF8 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+  }
+}
+
+@media (max-width: 768px) {
+  .error-actions {
+    flex-direction: column;
+    align-items: stretch;
+    
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+

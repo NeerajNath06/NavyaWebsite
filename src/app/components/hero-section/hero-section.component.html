@@ -1,0 +1,63 @@
+<section class="hero-section">
+  <div class="hero-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="favicon-icons">
+      <div class="floating-favicon" *ngFor="let i of [1,2,3,4,5,6]; let idx = index">
+        <svg [attr.width]="60 + idx * 10" [attr.height]="60 + idx * 10" viewBox="0 0 50 50" fill="none">
+          <defs>
+            <linearGradient [attr.id]="'faviconGrad' + i" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0057FF;stop-opacity:0.5" />
+              <stop offset="50%" style="stop-color:#38BDF8;stop-opacity:0.4" />
+              <stop offset="100%" style="stop-color:#A855F7;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+          <path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" [attr.stroke]="'url(#faviconGrad' + i + ')'" stroke-width="2" fill="none" opacity="0.4"/>
+          <path d="M25 15L35 20V30L25 35L15 30V20L25 15Z" [attr.fill]="'url(#faviconGrad' + i + ')'" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="particles">
+      <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]"></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text fade-in-up">
+        <h1 class="hero-tagline">Smart Cloud.<br>Smarter Software.</h1>
+        <p class="hero-subline">Next-gen software & cloud engineering for modern businesses.</p>
+        <div class="hero-buttons">
+          <a routerLink="/get-quote" class="btn btn-primary">Get a Quote</a>
+          <a routerLink="/portfolio" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="floating-icon float">
+          <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+            <defs>
+              <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#00D9FF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="90" stroke="url(#iconGradient)" stroke-width="3" fill="none" opacity="0.3"/>
+            <path d="M100 40 L120 80 L160 80 L130 110 L140 150 L100 130 L60 150 L70 110 L40 80 L80 80 Z" 
+                  fill="url(#iconGradient)" 
+                  opacity="0.8"/>
+            <circle cx="100" cy="100" r="30" stroke="url(#iconGradient)" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+  </div>
+</section>

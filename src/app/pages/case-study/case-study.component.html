@@ -1,0 +1,54 @@
+<div class="case-study-page">
+  <section class="case-study-hero section">
+    <div class="container">
+      <a routerLink="/portfolio" class="back-link">← Back to Portfolio</a>
+      <h1 class="fade-in-up">{{ project.title }}</h1>
+      <p class="client-name fade-in-up">{{ project.client }}</p>
+    </div>
+  </section>
+
+  <section class="case-study-content section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <div class="section-block glass-card fade-in-up">
+            <h2>The Problem</h2>
+            <p>{{ project.problem }}</p>
+          </div>
+
+          <div class="section-block glass-card fade-in-up">
+            <h2>Our Solution</h2>
+            <p>{{ project.solution }}</p>
+          </div>
+
+          <div class="section-block glass-card fade-in-up">
+            <h2>Tech Stack</h2>
+            <div class="tech-stack-grid">
+              <span class="tech-item" *ngFor="let tech of project.techStack">{{ tech }}</span>
+            </div>
+          </div>
+
+          <div class="section-block glass-card fade-in-up">
+            <h2>Business Impact</h2>
+            <p>{{ project.impact }}</p>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card glass-card fade-in-up">
+            <h3>Project Details</h3>
+            <div class="detail-item">
+              <strong>Timeline:</strong>
+              <span>{{ project.timeline }}</span>
+            </div>
+            <div class="detail-item">
+              <strong>Client:</strong>
+              <span>{{ project.client }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

@@ -1,0 +1,151 @@
+<div class="contact-page">
+  <section class="contact-hero section">
+    <div class="container">
+      <h1 class="fade-in-up">Get In Touch</h1>
+      <p class="section-subtitle fade-in-up">Let's discuss how we can help transform your business</p>
+    </div>
+  </section>
+
+  <section class="contact-content section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper glass-card fade-in-up">
+          <h2>Send Us a Message</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input 
+                type="text" 
+                id="fullName" 
+                formControlName="fullName"
+                [class.error]="submitted && f['fullName'].errors">
+              <span class="error-message" *ngIf="submitted && f['fullName'].errors">
+                Full name is required
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                formControlName="email"
+                [class.error]="submitted && f['email'].errors">
+              <span class="error-message" *ngIf="submitted && f['email'].errors">
+                Valid email is required
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                formControlName="phone"
+                [class.error]="submitted && f['phone'].errors">
+              <span class="error-message" *ngIf="submitted && f['phone'].errors">
+                Phone number is required
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceNeeded">Service Needed *</label>
+              <select 
+                id="serviceNeeded" 
+                formControlName="serviceNeeded"
+                [class.error]="submitted && f['serviceNeeded'].errors">
+                <option value="">Select a service</option>
+                <option value="cloud">Cloud Services</option>
+                <option value="development">Software Development</option>
+                <option value="api">API Development</option>
+                <option value="devops">DevOps & CI/CD</option>
+                <option value="consulting">Consulting</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="error-message" *ngIf="submitted && f['serviceNeeded'].errors">
+                Please select a service
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea 
+                id="message" 
+                formControlName="message"
+                [class.error]="submitted && f['message'].errors"
+                rows="5"
+                placeholder="Tell us about your project..."></textarea>
+              <span class="error-message" *ngIf="submitted && f['message'].errors">
+                Message is required
+              </span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div class="contact-info-wrapper">
+          <div class="contact-info glass-card fade-in-up">
+            <h2>Contact Information</h2>
+            
+            <div class="info-item">
+              <h4>Email</h4>
+              <a href="mailto:info&#64;navyacloud.com">info&#64;navyacloud.com</a>
+            </div>
+
+            <div class="info-item">
+              <h4>Phone</h4>
+              <a href="tel:+917694073275">+91 7694073275</a>
+            </div>
+
+            <div class="info-item">
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 10:00 AM - 7:00 PM<br>
+              Saturday: 2nd and 4th Saturday of the month Closed<br>
+              Sunday: Closed</p>
+            </div>
+
+            <div class="info-item">
+              <h4>Office Address</h4>
+              <p>16/04 New Chouksey Nagar<br>
+              JNCT Road<br>
+              Nabibagh Bhopal - 462038<br>
+              Bhopal (M.P.), India</p>
+            </div>
+
+            <a href="https://wa.me/917694073275" class="whatsapp-btn" target="_blank">
+              <span>💬</span> Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="map-wrapper glass-card fade-in-up">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.5!2d77.4094!3d23.2599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c426b0b0b0b0b%3A0x0b0b0b0b0b0b0b0b!2sNew%20Chouksey%20Nagar%2C%20JNCT%20Road%2C%20Nabibagh%2C%20Bhopal%2C%20Madhya%20Pradesh%20462038!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
+              width="100%" 
+              height="300" 
+              style="border:0; border-radius: 15px;" 
+              allowfullscreen="" 
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Navya Cloud & Software Solutions - Office Location">
+            </iframe>
+            <div class="map-overlay">
+              <a href="https://www.google.com/maps/search/?api=1&query=16%2F04+New+Chouksey+Nagar%2C+JNCT+Road%2C+Nabibagh%2C+Bhopal%2C+Madhya+Pradesh+462038" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="map-link-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

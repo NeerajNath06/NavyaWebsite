@@ -1,0 +1,117 @@
+.services-section {
+  background: var(--bg-primary);
+  background: #0f0f1e; /* Fallback */
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  h2 {
+    margin-bottom: 1rem;
+    background: var(--text-gradient);
+    background: linear-gradient(135deg, #00D9FF 0%, #9333EA 100%); /* Fallback */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  color: #E0E7FF; /* Fallback */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-12px) rotate(1deg);
+    box-shadow: var(--shadow-glow);
+    box-shadow: 0 20px 60px rgba(0, 102, 255, 0.4); /* Fallback */
+    border-color: var(--primary-cyan);
+    border-color: #00D9FF; /* Fallback */
+    
+    .service-icon {
+      transform: scale(1.15) rotate(5deg);
+      
+      span {
+        filter: drop-shadow(0 0 20px var(--primary-cyan));
+        filter: drop-shadow(0 0 20px #00D9FF); /* Fallback */
+      }
+    }
+  }
+}
+
+.service-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-button);
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%); /* Fallback */
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.3);
+  
+  span {
+    font-size: 2.8rem;
+    color: white;
+    transition: all 0.4s ease;
+    
+    /* Icon placeholders - you can replace with actual icons */
+    &.icon-cloud::before { content: '☁'; }
+    &.icon-deploy::before { content: '🚀'; }
+    &.icon-migration::before { content: '🔄'; }
+    &.icon-devops::before { content: '⚙'; }
+    &.icon-api::before { content: '🔌'; }
+    &.icon-angular::before { content: '🅰'; }
+    &.icon-microservices::before { content: '🧩'; }
+    &.icon-erp::before { content: '📊'; }
+    &.icon-auth::before { content: '🔐'; }
+    &.icon-ai::before { content: '🤖'; }
+    &.icon-dashboard::before { content: '📈'; }
+    &.icon-backend::before { content: '⚡'; }
+  }
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  color: #E0E7FF; /* Fallback */
+  line-height: 1.7;
+  margin: 0;
+}
+
+.services-cta {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

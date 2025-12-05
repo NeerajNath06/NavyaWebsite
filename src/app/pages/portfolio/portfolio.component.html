@@ -1,0 +1,54 @@
+<div class="portfolio-page">
+  <section class="portfolio-hero section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h1>Our Portfolio</h1>
+        <p class="section-subtitle">Showcasing our innovative solutions and successful projects</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-content section">
+    <div class="container">
+      <!-- Filters -->
+      <div class="portfolio-filters fade-in-up">
+        <button 
+          *ngFor="let filter of filters"
+          [class.active]="selectedFilter === filter.value"
+          (click)="setFilter(filter.value)"
+          class="filter-btn">
+          {{ filter.label }}
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <div 
+          class="project-card glass-card fade-in-up"
+          *ngFor="let project of filteredProjects"
+          [attr.data-category]="project.category">
+          <div class="project-image">
+            <div class="project-gradient">
+              <div class="gradient-shape shape-1"></div>
+              <div class="gradient-shape shape-2"></div>
+              <div class="gradient-shape shape-3"></div>
+            </div>
+            <div class="project-overlay">
+              <a [routerLink]="['/portfolio', project.id]" class="view-btn">
+                View Case Study →
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="project-tech">
+              <span class="tech-tag" *ngFor="let tech of project.tech">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

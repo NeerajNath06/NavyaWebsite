@@ -1,0 +1,22 @@
+<section class="why-choose-section section">
+  <div class="why-choose-background">
+    <div class="glow-light light-1"></div>
+    <div class="glow-light light-2"></div>
+    <div class="glow-light light-3"></div>
+  </div>
+  
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <h2>Why Choose Us</h2>
+      <p class="section-subtitle">Your trusted partner in digital transformation</p>
+    </div>
+    
+    <div class="usp-container">
+      <div class="usp-badge glass-card" *ngFor="let usp of usps">
+        <span class="check-icon">✔</span>
+        <span class="usp-text">{{ usp.text }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,63 @@
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+// Body Text
+body, p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+// Highlight Text
+.highlight {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--cyan-glow);
+}
+
+.lexend {
+  font-family: 'Lexend', sans-serif;
+}
+
+// Links
+a {
+  color: var(--cyan-glow);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: var(--sky-blue);
+  }
+}
+
